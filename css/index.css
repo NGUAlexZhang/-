@@ -1,10 +1,28 @@
-*{
-    padding: 0;
-    margin: 0;
+#app{
+    margin: 0px auto;
+    border: 1px blue solid;
+    width: 500px;
+    height: 500px;
 }
+.title{
 
-html body{
-    width: 100%;
-    height: 100%;
-    background-color: blue;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    font-size: 36px;
+    background: coral;
+}
+.inp{
+    outline-style: none;
+    border: 0px solid #ccc;
+    width: 330px;
+    font-size: 15px;
+    padding: 3px 3px;
+    font-family: "Microsoft soft";
+}
+input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
 }

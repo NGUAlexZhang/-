@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="css">
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <title>note</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-
 <body>
-
+    <div id="app">
+        <div class="title">
+            note
+        </div>
+        <hr>
+        <div>
+            <span>
+                <p style="color: beige">please input what u want
+                    <input type="text" placeholder="press enter to save" v-model="tmp" @keydown="add" class="inp">
+                    <button @click="add">save</button>
+                </p>
+            </span>
+        </div>
+        <div class="content">
+            <ul>
+                <li v-for="(item,index) in items">
+                    {{index+1}}{{item}}
+                    <button @click="remove(index)">remove</button>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <p>total {{items.length}} things to do</p>
+        <button @click="clear">clear</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/index.js">
+    </script>
 </body>
-
 </html>
